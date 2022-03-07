@@ -6,6 +6,7 @@ from Utils.SingletonInstance import SingleTonInstance
 
 class DBManager(SingleTonInstance):
     conn = pymysql.connect(host='localhost', user='root', password='root', db='crawler', charset='utf8')
+
     cursor = conn.cursor()
     def __init__(self):
         sql = """CREATE TABLE IF NOT EXISTS ENCARLIST(
